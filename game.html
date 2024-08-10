@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero-image">
+    <h1 align="center" style="text-decoration: blue;">Let's Play Tic-Tac-Toe</h1>
+        <h2 class="glow blink_me" align="center"> Player Turn- <span id="player"><script>document.write(localStorage.getItem("xname"))</script></span></h2>
+        <div>
+        <div  style = "text-align:center;"><button id="restart" onclick="buttonRestart()">RESTART</button></div>
+        <br>
+        <div style = "text-align:center;"><button id="restart" onclick="location.href='index.html'">NEW GAME</button></div>
+        </div>
+        <h3 align="center" style="text-decoration: blue;">Click on the below box who has turn!!👇👇</h3>
+        <table id="game" align="center">
+            <tr>
+                <td onclick="boxClicked(1,1)"></td>
+                <td onclick="boxClicked(1,2)"></td>
+                <td onclick="boxClicked(1,3)"></td>
+            </tr>
+            <tr>
+                <td onclick="boxClicked(2,1)"></td>
+                <td onclick="boxClicked(2,2)"></td>
+                <td onclick="boxClicked(2,3)"></td>
+            </tr>
+            <tr>
+                <td onclick="boxClicked(3,1)"></td>
+                <td onclick="boxClicked(3,2)"></td>
+                <td onclick="boxClicked(3,3)"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="popup-container" id="popup-container">
+        <div class="popup">
+          <h2 id="final-message"></h2>
+          <h3 id="final-message-reveal-word"></h3>
+        </div>
+      </div>
+
+
+    <script async defer src="script.js" ></script>
+    <!-- <script async defer src="valid.js" ></script> -->
+
+</body>
+</html>
